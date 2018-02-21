@@ -41,8 +41,16 @@
                 
 <div style="padding: 40px;">
     <h1 title="Glad to see you here!">Hi, I am Dmitrijs Vasilcenko.</h1>
-    <img src="profile.jpg" title="Marco Pierre White 07/05/2017" style="max-width:100%;height:auto; border-radius: 50%;" alt="Profile Picture" width="250" height="250">
-        <p><b>Welcome to my personal Web Page!</b></p>
+    <div class="w3-container">
+    <img src="profile.jpg" title="Marco Pierre White 07/05/2017" style="cursor:zoom-in;max-width:100%;height:auto; border-radius: 50%;"  onclick="document.getElementById('modal01').style.display='block'" alt="Profile Picture" width="250" height="250">
+    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+            <div class="w3-modal-content w3-animate-zoom">
+              <img src="profile.jpg" style="width:100%">
+            </div>
+          </div>
+        </div>
+
+    <p><b>Welcome to my personal Web Page!</b></p>
         <p>On this page you can see some of my skills, tools that I'm using and read about my background to get to know me better.</p>
         <p>Currently I'm studying <em>Business Computing & IT at Aston University</em> in Birmingham, UK.<br>
     Treasurer and co-founder of the <abbr title="Eastern European Society"><em>EES</em></abbr> and Communication Director in <em>Enactus Aston</em>.
