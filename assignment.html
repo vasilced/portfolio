@@ -23,28 +23,27 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-        </button>
-        <a class="navbar-brand" href="index.html">Home</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-            <li><a href="assignment.html">Assignment</a></li>
-            <li><a href="CV.pdf" target="_blank">Resume</a></li>
-        </ul>
-        </div>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
     </div>
-    </nav>
-</div>
-<div>
- <!-- Script responsible for the responsiveness of the navigation bar -->
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="assignment.html">Assignment</a></li>
+        <li><a href="CV.pdf" target="_blank">Resume</a></li>
+        <li><a href="gallery.html" target="_blank">Gallery</a></li>
+     </ul>
+    </div>
+  </div>
+</nav>
+            <!-- Script responsible for the responsiveness of the navigation bar -->
             <script>
                     function myFunction() {
                         var x = document.getElementById("myTopnav");
@@ -55,101 +54,8 @@
                         }
                     }
                     </script>
-</div>
 
-<h2 style="text-align:center; padding: 40px;">My favourite travel destinations</h2>
-
-<div class="container">
-  <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-    <img src="sea.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-    <img src="city.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-    <img src="palace.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-    <img src="london.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-    <img src="amsterdam.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
-    <img src="cardiff.jpg" style="width:100%">
-  </div>
-    
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
-
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="sea.jpg" style="width:100%" onclick="currentSlide(1)" alt="Croatia, Makarska">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="city.jpg" style="width:100%" onclick="currentSlide(2)" alt="Croatia, Okrug Gornji">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="palace.jpg" style="width:100%" onclick="currentSlide(3)" alt="Russia, Moscow">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="london.jpg" style="width:100%" onclick="currentSlide(4)" alt="United Kingdom, London">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="amsterdam.jpg" style="width:100%" onclick="currentSlide(5)" alt="Netherlands, Amsterdam">
-    </div>    
-    <div class="column">
-      <img class="demo cursor" src="cardiff.jpg" style="width:100%" onclick="currentSlide(6)" alt="Wales, Cardiff">
-    </div>
-  </div>
-</div>
-
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-</script>
- 
+<h1 style="padding: 40px;"> Coming Soon!</h1>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112819999-1"></script>
     <script>
