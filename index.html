@@ -19,8 +19,8 @@
                 <!-- Favicon of the page -->
                 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
                 <title>Dmitrijs Vasilcenko</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <!-- Collapsible Navigation Bar -->
@@ -54,57 +54,72 @@
                         }
                     }
                     </script>
- <!-- Block responsible for displaying my photo -->
-<div style="padding: 40px;">
-    <h1 title="Glad to see you here!">Hi, I am Dmitrijs Vasilcenko.</h1>
-    <!-- Blocks that make my photo pop up in the modal box -->
-    <div class="w3-container">
-    <img src="profile.jpg" title="Marco Pierre White 07/05/2017" style="cursor:zoom-in;max-width:100%;height:auto; border-radius: 50%;"  onclick="document.getElementById('modal01').style.display='block'" alt="Profile Picture" width="250" height="250">
-    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-            <div class="w3-modal-content w3-animate-zoom">
-              <img src="profile.jpg" style="width:100%">
+
+<div class="container" style="padding-top:100px">
+    <div class="row">
+        <!-- Block responsible for displaying my photo -->
+        <div class="col-md-4">
+            <h1 title="Glad to see you here!">Hi, I am Dmitrijs Vasilcenko.</h1>
+            <!-- Blocks that make my photo pop up in the modal box -->
+            <div class="w3-container">
+            <img src="profile.jpg" title="Marco Pierre White 07/05/2017" style="cursor:zoom-in;max-width:100%;height:auto; border-radius: 50%;"  onclick="document.getElementById('modal01').style.display='block'" alt="Profile Picture" width="250" height="250">
+            <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                    <div class="w3-modal-content w3-animate-zoom">
+                    <img src="profile.jpg" style="width:100%">
+                    </div>
+                </div>
+                </div>
             </div>
-          </div>
+            <div class="col-md-8">
+
+                <div style="padding-top:100px">
+                <!-- Paragraph about this page & my background -->   
+                <div style="font-size: 18px;">
+                    <p><b>Welcome to my personal Web Page!</b></p>
+                </div>    
+                    <p>On this page you can see some of my skills, tools that I'm using and read about my background to get to know me better.</p>
+                    <p>Currently I'm studying <em>Business Computing & IT at Aston University</em> in Birmingham, UK.<br>
+            Treasurer and co-founder of the <abbr title="Eastern European Society"><em>EES</em></abbr> and Communication Director in <em>Enactus Aston</em>.
+            Speaking fluent English, Russian and Latvian. Also have moderate knowledge of German and Spanish.<br> 
+            Currently looking for Industrial Placement to enhance my skills and gain the experience in the field, starting summer 2018.
+                    </p>
+                <!-- Block of Bootstrap labels that describes my skills & areas of interest -->
+                <div style="font-size: 18px;">                 
+                    <h3><b>Areas of interest & Skills</b></h3>
+                        <span class="label label-primary">Sales, Marketing & Customer Service</span>
+                        <span class="label label-primary">Business Analytics</span>
+                        <span class="label label-primary">Web Development</span>
+                        <span class="label label-primary">Financial Accounting</span>
+                        <span class="label label-primary">Project Management & Comunication</span>
+                        <span class="label label-primary">HTML</span>
+                        <span class="label label-primary">PHP</span>
+                        <span class="label label-primary">CSS</span>
+                        <span class="label label-primary">Bootstrap</span>
+                        <span class="label label-primary">Git Bash</span>
+                        <span class="label label-primary">SQL</span>
+                        <span class="label label-primary">Slack</span>
+                        <span class="label label-primary">Mailchimp</span>
+                        <span class="label label-primary">Google Analytics</span>
+                </div>
+               </div>
+            </div>        
         </div>
-        <!-- Paragraph about this page & my background -->   
-        <p><b>Welcome to my personal Web Page!</b></p>
-            <p>On this page you can see some of my skills, tools that I'm using and read about my background to get to know me better.</p>
-            <p>Currently I'm studying <em>Business Computing & IT at Aston University</em> in Birmingham, UK.<br>
-    Treasurer and co-founder of the <abbr title="Eastern European Society"><em>EES</em></abbr> and Communication Director in <em>Enactus Aston</em>.
-    Speaking fluent English, Russian and Latvian. Also have moderate knowledge of German and Spanish.<br> 
-    Currently looking for Industrial Placement to enhance my skills and gain the experience in the field, starting summer 2018.
-            </p>
-        <!-- Block of Bootstrap labels that describes my skills & areas of interest -->
-        <div style="font-size: 18px;">
-            <h3>Areas of interest & Skills</h3>
-                <span class="label label-primary">Sales, Marketing & Customer Service</span>
-                <span class="label label-primary">Business Analytics</span>
-                <span class="label label-primary">Web Development</span>
-                <span class="label label-primary">Financial Accounting</span>
-                <span class="label label-primary">Project Management & Comunication</span>
-                <span class="label label-primary">HTML</span>
-                <span class="label label-primary">PHP</span>
-                <span class="label label-primary">CSS</span>
-                <span class="label label-primary">Bootstrap</span>
-                <span class="label label-primary">Git Bash</span>
-                <span class="label label-primary">SQL</span>
-                <span class="label label-primary">Slack</span>
-                <span class="label label-primary">Mailchimp</span>
-                <span class="label label-primary">Google Analytics</span>
-            </div>
-    </div>        
-</div>
-<!-- My signature and year when this page was developed -->
-<div>       
-    <p style="text-align:center;"><small><b>&copy; Dmitrijs Vasilcenko 2018</b></small></p>
-</div>    
-    <hr>
-    <!-- Links to my social media accounts located at the bottom -->
-     <div style="text-align:center">
-     <a style="font-size:175%;" href = 'https://www.linkedin.com/in/dmitrijs-vasilcenko-1359ab13b/' target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> 
-        <a style="font-size:175%;" href="mailto:vasilchenko.dmitrij@inbox.lv"> <i class="fa fa-envelope" aria-hidden="true"></i></a>
-        <a style="font-size:175%" href="https://github.com/vasilced" target="_blank"> <i class="fa fa-github" aria-hidden="true"></i></a>
     </div>
+</div>
+
+<div style="padding-top:150px">
+    <!-- My signature and year when this page was developed -->
+    <div>       
+        <p style="text-align:center;"><small><b>&copy; Dmitrijs Vasilcenko 2018</b></small></p>
+    </div>    
+        <hr>
+        <!-- Links to my social media accounts located at the bottom -->
+        <div style="text-align:center">
+            <a style="font-size:175%;" href = 'https://www.linkedin.com/in/dmitrijs-vasilcenko-1359ab13b/' target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> 
+            <a style="font-size:175%;" href="mailto:vasilchenko.dmitrij@inbox.lv"> <i class="fa fa-envelope" aria-hidden="true"></i></a>
+            <a style="font-size:175%" href="https://github.com/vasilced" target="_blank"> <i class="fa fa-github" aria-hidden="true"></i></a>
+        </div> 
+</div>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112819999-1"></script>
     <script>
