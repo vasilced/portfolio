@@ -21,6 +21,7 @@
                 <title>Dmitrijs Vasilcenko</title>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+               <!-- Nprogress bar -->
                <script src='https://unpkg.com/nprogress@0.2.0/nprogress.js'></script>
                <link rel='stylesheet' href='https://unpkg.com/nprogress@0.2.0/nprogress.css'/>
 </head>
@@ -38,7 +39,6 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="assignment.html">Assignment</a></li>
         <li><a href="CV.pdf" target="_blank">Resume</a></li>
         <li><a href="gallery.html">Gallery</a></li>
      </ul>
@@ -86,7 +86,7 @@
             Currently looking for Industrial Placement to enhance my skills and gain the experience in the field, starting summer 2018.
                     </p>
                 <!-- Block of Bootstrap labels that describes my skills & areas of interest -->
-                <div style="font-size: 18px;">                 
+                <div style="font-size: 18px; padding-top:20px;">                 
                     <h3><b>Areas of interest & Skills</b></h3>
                         <span class="label label-primary">Sales, Marketing & Customer Service</span>
                         <span class="label label-primary">Business Analytics</span>
@@ -122,14 +122,14 @@
             <a style="font-size:175%" href="https://github.com/vasilced" target="_blank"> <i class="fa fa-github" aria-hidden="true"></i></a>
         </div> 
 </div>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112819999-1"></script>
     <script>
+    // https://github.com/rstacruz/nprogress Nprogress Bar library source
         NProgress.start();
         setTimeout(function(){
             NProgress.done();
         }, 1000);
-       
+ // Global site tag (gtag.js) & script responsible for Nprogress Bar - Google Analytics
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
