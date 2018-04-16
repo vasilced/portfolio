@@ -1,149 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-                <!-- Metadata about the page -->
-                <meta charset="UTF-8">
-                <meta name="description" content="Website of Dmitrijs Vasilcenko">
-                <meta name="author" content="Dmitrijs Vasilcenko">
-                <meta name="keywords" content="Aston University, Dmitrijs Vasilcenko, HTML, CSS, PHP, Bootstrap, Sales, Marketing, Business Analytics">
-                <meta http-equiv="refresh" content="30">
-                <!-- Responsiveness of the page -->
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <!-- JQuery -->
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-                <!-- Latest compiled and minified CSS -->
-                <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-                <!-- My own CSS Stylesheet -->
-                <link rel="stylesheet" type="text/css" href="mystyle.css">
-                <!-- Favicon of the page -->
-                <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-                <title>Dmitrijs Vasilcenko</title>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-                <script src='https://unpkg.com/nprogress@0.2.0/nprogress.js'></script>
-                <link rel='stylesheet' href='https://unpkg.com/nprogress@0.2.0/nprogress.css'/>
-</head>
+    <head>
+        <!-- Metadata about the page -->
+                   <meta charset="UTF-8">
+                   <meta name="description" content="Website of Dmitrijs Vasilcenko">
+                   <meta name="author" content="Dmitrijs Vasilcenko">
+                   <meta name="keywords" content="Aston University, Dmitrijs Vasilcenko, HTML, CSS, PHP, Bootstrap, Sales, Marketing, Business Analytics">
+                   <meta http-equiv="refresh" content="30">
+                   <!-- Below you can see all the sources that I used to make the design of my page. -->
+                   <!--  Because of personal preferences and just to keep everything neat and appealing I decided to keep the design as minimalistic as possible. -->
+                   <!-- Responsiveness of the page -->
+                   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                   <!-- JQuery -->
+                   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+                   <!-- Latest compiled and minified CSS -->
+                   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+                   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                   <!-- My own CSS Stylesheet -->
+                   <link rel="stylesheet" type="text/css" href="mystyle.css">
+                   <!-- Favicon of the page -->
+                   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+                   <title>Dmitrijs Vasilcenko</title>
+                   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                  <!-- Nprogress bar -->
+                  <script src='https://unpkg.com/nprogress@0.2.0/nprogress.js'></script>
+                  <link rel='stylesheet' href='https://unpkg.com/nprogress@0.2.0/nprogress.css'/>
+   </head>
 <body>
 <div>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+<!-- Collapsible Navigation Bar to make my page look more professional. -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
-        <div class="navbar-header">
+      <div class="navbar-header">
+      <!-- Dropdown button that pops up on smartphones or if you zoom in page. -->
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
         </button>
         <a class="navbar-brand" href="index.html">Home</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
+      </div>
+      <!-- Items that pop up in the dropdown menu. -->
+      <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-            <li><a href="CV.pdf" target="_blank">Resume</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-        </div>
+          <li><a href="CV.pdf" target="_blank">Resume</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <!-- Two buttons that can change the background and text color of the page. To the Night mode and back. -->
+          <li><a class="btn  btn-link" onClick="nightMode()">Night mode</a></li>
+          <li><a class="btn btn-link" onClick="dayMode()">Day mode</a> </li>
+       </ul>
+      </div>
     </div>
-    </nav>
-</div>
-<div>
- <!-- Script responsible for the responsiveness of the navigation bar -->
-            <script>
-                    function myFunction() {
-                        var x = document.getElementById("myTopnav");
-                        if (x.className === "topnav") {
-                            x.className += " responsive";
-                        } else {
-                            x.className = "topnav";
-                        }
-                    }
-                    </script>
+  </nav>
+              <!-- Script responsible for the responsiveness of the navigation bar -->
+              <script>
+                      function myFunction() {
+                          var x = document.getElementById("myTopnav");
+                          if (x.className === "topnav") {
+                              x.className += " responsive";
+                          } else {
+                              x.className = "topnav";
+                          }
+                      }
+                      </script>
 </div>
 
 <h2 style="text-align:center; padding: 40px;">Favourite travel destinations</h2>
-
-<div class="container" style="width:800px;">
-  <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-    <img src="amsterdam.jpg" style="width:100%">
-  </div>
-  <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-    <img src="cardiff.jpg" style="width:100%">
-  </div>  
-  <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-    <img src="london.jpg" style="width:100%">
-  </div>
-    <div class="mySlides">
-      <div class="numbertext">4 / 6</div>
-      <img src="moscow.JPG" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <div class="numbertext">5 / 6</div>
-      <img src="croatia.JPG" style="width:100%">
-    </div> 
-    <div class="mySlides">
-      <div class="numbertext">6 / 6</div>
-      <img src="sea.JPG" style="width:100%">
-    </div> 
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
-
+<hr />
+<!-- Section showing all of my pictures in the thumbnails and aligning all of them in the rows using Bootstrap grid system. -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" style="padding:20px">
+          <!-- Buttons that switch the image layout from grid to the list. You can see the scripts below. -->
+            <button class="btn btn-default" onClick="gridView()">Grid view</button>
+            <button class="btn btn-primary" onClick="listView()">List view</button>
+        </div>
+      </div>
+  <!-- This is the actual image grid. However, the source is not set as it is calculated through JavaScript.
+        Also the default view is set to grid (col-md-4), however using the JavaScript, user can toggle the view from grid to list
+        and the opposite as I have mentioned before.
+  -->
   <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="amsterdam.jpg" style="width:100%" onclick="currentSlide(1)" alt="Netherlands, Amsterdam">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="cardiff.jpg" style="width:100%" onclick="currentSlide(2)" alt="Wales, Cardiff">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="london.jpg" style="width:100%" onclick="currentSlide(3)" alt="United Kingdom, London">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="moscow.JPG" style="width:100%" onclick="currentSlide(4)" alt="Russia, Moscow">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="croatia.JPG" style="width:100%" onclick="currentSlide(5)" alt="Croatia, Okrug Gornji">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="sea.JPG" style="width:100%" onclick="currentSlide(6)" alt="Croatia, Makarska">
-    </div>
+    <div id="col-amsterdam" class="col-md-4">
+    <img title="Amsterdam" alt="Amsterdam" id="amsterdam" class="img-thumbnail" src="" >
   </div>
-</div>
-
-<script>
-  var slideIndex = 1;
-  showSlides(slideIndex);
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    var captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
-  }
-  </script>
+  <div id="col-cardiff" class="col-md-4">
+    <img id="cardiff" title="Cardiff" alt="Cardiff" class="img-thumbnail" src="" >
+  </div>  
+  <div id="col-london" class="col-md-4">
+    <img id="london" title="London" alt="London" class="img-thumbnail" src="" >
+  </div>
+    <div id="col-moscow" class="col-md-4">
+      <img id="moscow" title="Moscow" alt="Moscow" class="img-thumbnail" src="" >
+    </div>
+    <div id="col-croatia" class="col-md-4">
+      <img id="croatia" title="Croatia" alt="Croatia" class="img-thumbnail" src="" >
+    </div> 
+    <div id="col-sea" class="col-md-4">
+      <img id="sea" title="Makarska, Croatia" alt="Makarska, Croatia" class="img-thumbnail" src="" >
+    </div> 
+  </div>
+  </div>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112819999-1"></script>
     <script>
+
+      // This script triggers when the page loads. It filters through each of the images and it appends the source value of 
+      // the image to the value of the image object within the data array.
+     $(document).ready(function(){
+       
+       var data = [
+         {
+          id:'amsterdam',
+          image:"amsterdam.jpg"
+         },
+         {
+          id:'cardiff',
+          image:"cardiff.jpg"
+         },
+         {
+          id:'london',
+          image:"london.jpg"
+         },
+         {
+          id:'moscow',
+          image:"moscow.JPG"
+         },
+         {
+          id:'croatia',
+          image:"croatia.JPG"
+         },
+         {
+          id:'sea',
+          image:"sea.JPG"
+         }
+       ];
+
+      for(item of data) {
+          document.getElementById(item.id).src=item.image;
+      };
+     });
+     
+    //  It goes through all of the ids and it appends to the element a class specified below. Col-md-4 and Col-md-12
+     var targetCol = [
+       'col-amsterdam',
+       'col-cardiff',
+       'col-london',
+       'col-moscow',
+       'col-croatia',
+       'col-sea'
+     ];
+
+     function gridView() {
+       
+       for(item of targetCol) {
+        document.getElementById(item).className = "col-md-4";
+       }
+     }
+
+     function listView() {
+       
+      for(item of targetCol) {
+        document.getElementById(item).className = "col-md-12";
+       }
+     }
+
+        // Function that changes background color to the black and text color to white when you toggle it.
+        function nightMode() {
+        document.body.style.background="black";
+        document.body.style.color="white";
+      }
+        // Function that changes everything back to normal. Background to the white color and text to the black color.
+      function dayMode() {
+        document.body.style.background="white";
+        document.body.style.color="black";
+      }
+
       // https://github.com/rstacruz/nprogress Nprogress Bar library source
               NProgress.start();
         setTimeout(function(){

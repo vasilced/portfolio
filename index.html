@@ -7,6 +7,8 @@
                 <meta name="author" content="Dmitrijs Vasilcenko">
                 <meta name="keywords" content="Aston University, Dmitrijs Vasilcenko, HTML, CSS, PHP, Bootstrap, Sales, Marketing, Business Analytics">
                 <meta http-equiv="refresh" content="30">
+                <!-- Below you can see all the sources that I used to make the design of my page. -->
+                <!--  Because of personal preferences and just to keep everything neat and appealing I decided to keep the design as minimalistic as possible. -->
                 <!-- Responsiveness of the page -->
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <!-- JQuery -->
@@ -26,10 +28,33 @@
                <link rel='stylesheet' href='https://unpkg.com/nprogress@0.2.0/nprogress.css'/>
 </head>
 <body>
-<!-- Collapsible Navigation Bar -->
+    <!-- Welcome modal message that I made that pops up when you enter the page -->
+    <!--The attribute "fade" adds the effect that fades the modal in and out.-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <!-- Next div is responsible for the style of the modal and contains header and body. -->
+                    <!-- To keep it as a simple and short message I decided not to add footer. -->
+                    <!-- You can dismiss this modal both by clicking on the button and by clicking outside the modal. -->
+                    <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Welcome!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                       Hi, glad to see you on my page.
+                        Thanks for visiting!
+                    </div>
+                </div>
+                </div>
+            </div>
+
+<!-- Collapsible Navigation Bar to make my page look more professional. -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
+    <!-- Dropdown button that pops up on smartphones or if you zoom in page. -->
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -37,10 +62,14 @@
       </button>
       <a class="navbar-brand" href="index.html">Home</a>
     </div>
+    <!-- Items that pop up in the dropdown menu. -->
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="CV.pdf" target="_blank">Resume</a></li>
         <li><a href="gallery.html">Gallery</a></li>
+        <!-- Two buttons that can change the background and text color of the page. To the Night mode and back. You can see scripts for them below -->
+        <li><a class="btn  btn-link" onClick="nightMode()">Night mode</a></li>
+        <li><a class="btn btn-link" onClick="dayMode()">Day mode</a> </li>
      </ul>
     </div>
   </div>
@@ -60,11 +89,13 @@
 <div class="container" style="padding-top:100px">
     <div class="row">
         <!-- Block responsible for displaying my photo -->
+        <!-- To align all the contents of the page on the same level I used mostly medium sized Bootstrap grids. -->
         <div class="col-md-4">
             <h1 title="Glad to see you here!">Hi, I am Dmitrijs Vasilcenko.</h1>
             <!-- Blocks that make my photo pop up in the modal box -->
             <div class="w3-container">
             <img src="profile.jpg" title="Marco Pierre White 07/05/2017" style="cursor:zoom-in;max-width:100%;height:auto; border-radius: 50%;"  onclick="document.getElementById('modal01').style.display='block'" alt="Profile Picture" width="250" height="250">
+            <!-- Background of the modal box is black because there was a bit of blank space around the photo and that was the only solution I found. -->
             <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
                     <div class="w3-modal-content w3-animate-zoom text-center " style="background-color:black;">
                     <img src="profile.jpg" style="width:400px; height:400px;">
@@ -72,10 +103,11 @@
                 </div>
                 </div>
             </div>
+            <!-- Part of the Bootstrap grid system. -->
             <div class="col-md-8">
 
                 <div style="padding-top:100px">
-                <!-- Paragraph about this page & my background -->   
+                <!-- Paragraph describing this page & my background -->   
                 <div style="font-size: 18px;">
                     <p><b>Welcome to my personal Web Page!</b></p>
                 </div>    
@@ -86,6 +118,8 @@
             Currently looking for Industrial Placement to enhance my skills and gain the experience in the field, starting summer 2018.
                     </p>
                 <!-- Block of Bootstrap labels that describes my skills & areas of interest -->
+                <!-- I decided to represent my skills using Bootstap primary labels because I thought that it will look more appealing and professional. -->
+                <!-- Only one downside may be that they look like buttons. -->
                 <div style="font-size: 18px; padding-top:20px;">                 
                     <h3><b>Areas of interest & Skills</b></h3>
                         <span class="label label-primary">Sales, Marketing & Customer Service</span>
@@ -115,7 +149,7 @@
         <p style="text-align:center;"><small><b>&copy; Dmitrijs Vasilcenko 2018</b></small></p>
     </div>    
         <hr>
-        <!-- Links to my social media accounts located at the bottom -->
+        <!-- Links to my social media accounts located at the bottom and represented as sall icons. -->
         <div style="text-align:center">
             <a style="font-size:175%;" href = 'https://www.linkedin.com/in/dmitrijs-vasilcenko-1359ab13b/' target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> 
             <a style="font-size:175%;" href="mailto:vasilchenko.dmitrij@inbox.lv"> <i class="fa fa-envelope" aria-hidden="true"></i></a>
@@ -124,12 +158,32 @@
 </div>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112819999-1"></script>
     <script>
+
+        // Script that sets the timeout for the modal to pop up. I set the timer to 1.5 seconds. -->
+            setTimeout(function() {
+                    $('#myModal').modal();
+            }, 3000);
+        
+        // Function that changes background color to the black and text color to white when you toggle it.
+                  function nightMode() {
+        document.body.style.background="black";
+        document.body.style.color="white";
+      }
+        // Function that changes everything back to normal. Background to the white color and text to the black color.
+      function dayMode() {
+        document.body.style.background="white";
+        document.body.style.color="black";
+      }
+
+
     // https://github.com/rstacruz/nprogress Nprogress Bar library source
+    // I used this small feature to make design of my page look a bit more advanced. That's the same loading bar on top of the screen as on Youtube.
         NProgress.start();
         setTimeout(function(){
             NProgress.done();
         }, 1000);
  // Global site tag (gtag.js) & script responsible for Nprogress Bar - Google Analytics
+ // Implemented google analytics script to monitor the views of my page.
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
