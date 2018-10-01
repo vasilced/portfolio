@@ -25,28 +25,6 @@
                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <!-- Welcome modal message that I made that pops up when you enter the page -->
-    <!--The attribute "fade" adds the effect that fades the modal in and out.-->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <!-- Next div is responsible for the style of the modal and contains header and body. -->
-                    <!-- To keep it as a simple and short message I decided not to add footer. -->
-                    <!-- You can dismiss this modal both by clicking on the button and by clicking outside the modal. -->
-                    <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Welcome!</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
-                    <div class="modal-body">
-                       Hi, glad to see you on my page.
-                        Thanks for visiting!
-                    </div>
-                </div>
-                </div>
-            </div>
-
 <!-- Collapsible Navigation Bar to make my page look more professional. -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -110,9 +88,9 @@
                 </div>    
                     <p>On this page you can see some of my skills, tools that I'm using and read about my background to get to know me better.</p>
                     <p>Currently I'm studying <em>Business Computing & IT at Aston University</em> in Birmingham, UK.<br>
-            Treasurer and co-founder of the <abbr title="Eastern European Society"><em>EES</em></abbr> and Communication Director in <em>Enactus Aston</em>.
+            In the Second Year of my studies I was a treasurer and co-founder of the <abbr title="Eastern European Society"><em>EES</em></abbr> and Communication Director in <em>Enactus Aston</em>.
             Speaking fluent English, Russian and Latvian. Also have moderate knowledge of German and Spanish.<br> 
-            Currently looking for Industrial Placement to enhance my skills and gain the experience in the field, starting summer 2018.
+            At the moment working as a Marketing Assistant in Conigital Group as a part of my Placement Year.
                     </p>
                 <!-- Block of Bootstrap labels that describes my skills & areas of interest -->
                 <!-- I decided to represent my skills using Bootstap primary labels because I thought that it will look more appealing and professional. -->
@@ -129,9 +107,7 @@
                         <span class="label label-primary">CSS</span>
                         <span class="label label-primary">Bootstrap</span>
                         <span class="label label-primary">Git Bash</span>
-                        <span class="label label-primary">SQL</span>
                         <span class="label label-primary">Slack</span>
-                        <span class="label label-primary">Mailchimp</span>
                         <span class="label label-primary">Google Analytics</span>
                 </div>
                </div>
@@ -155,12 +131,6 @@
 </div>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112819999-1"></script>
     <script>
-
-        // Script that sets the timeout for the modal to pop up. I set the timer to 1.5 seconds. -->
-            setTimeout(function() {
-                    $('#myModal').modal();
-            }, 3000);
-        
         // Function that changes background color to the black and text color to white when you toggle it.
                   function nightMode() {
         document.body.style.background="black";
