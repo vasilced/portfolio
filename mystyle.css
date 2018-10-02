@@ -47,3 +47,7 @@ img {
 .demo:hover {
   opacity: 1;
 }
+.col-md-4 img {
+  height:250px;
+  width:100%;
+}
